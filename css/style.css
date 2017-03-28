@@ -1,0 +1,128 @@
+html, body {
+    height: 100%;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  background: url("../images/background.jpg") #000;
+  color: #fff;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+body.alarm {
+    animation: alarm 1s linear infinite;
+}
+
+@keyframes alarm {
+    0% { background: url("../images/background.jpg") #000 }
+    50% { background: rgba(168,0,0,1) }
+    100% { background: url("../images/background.jpg") #000 }
+}
+
+@keyframes set {
+    0% { background: none }
+    30% { background: rgba(0,168,0,0.2) }
+    70% { background: rgba(0,168,0,0.2) }
+    100% { background: none }
+}
+
+@keyframes clear {
+    0% { background: none }
+    30% { background: rgba(168,0,0,0.2) }
+    70% { background: rgba(168,0,0,0.2) }
+    100% { background: none }
+}
+
+a:link, a:visited {
+  color: #fff;
+}
+
+a:hover, a:active {
+
+}
+
+.clock { opacity: 0.75; }
+
+.time {
+  font-size: 8rem;
+  visibility: hidden;
+}
+
+.time.ready {
+  visibility: visible;
+}
+
+.set-alarm {
+  font-size: 2rem;
+  padding: 20px 0;
+  border-radius: 15px;
+}
+
+.set-alarm.set {
+  animation: set 5s linear 1;
+}
+
+.set-alarm.clear {
+  animation: clear 5s linear 1;
+}
+
+.set-alarm h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.set-alarm select {
+  -webkit-appearance: none;
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 0;
+  color: #fff;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.set-alarm .controls {
+  display: inline;
+  font-size: 1rem;
+}
+
+.set-alarm .controls a {
+  margin: 0 10px;
+}
+
+.alarm .alarming {
+  visibility: visible;
+}
+
+.alarming {
+  visibility: hidden;
+  margin: 20px auto;
+}
+
+.alarming a {
+  display: block;
+  background-color: red;
+  margin: 10px;
+  padding: 30px;
+  width: calc(50% - 20px);
+  float: left;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 30px;
+  }
+}
