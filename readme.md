@@ -3,6 +3,14 @@ Alarm Clock
 
 Continuing work on this will be done on (https://github.com/stvedt/alarm-clock)
 
+## Running
+
+There is nothing fancy set up but you can easily run a local server by running:
+
+`python -m SimpleHTTPServer`
+
+A user can set and clear an alarm. When alarming the background of the page will flash red.
+
 ## Next Steps to continue building out
 
 - Continue searching for better alarm setting solution that is easier than a dropdown. (Text inputs considered)
